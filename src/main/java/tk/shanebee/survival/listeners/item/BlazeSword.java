@@ -18,11 +18,21 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.ItemMeta;
+import tk.shanebee.survival.Survival;
 import tk.shanebee.survival.managers.ItemManager;
 import tk.shanebee.survival.item.Item;
 import tk.shanebee.survival.util.Utils;
 
 public class BlazeSword implements Listener {
+
+	private final Survival plugin;
+	private final float VOLUME;
+
+	public BlazeSword(Survival plugin) {
+		this.plugin = plugin;
+		this.VOLUME = plugin.getSurvivalConfig().LEGENDARY_BLAZESWORD_VOLUME;
+	}
+
 
 	@EventHandler
 	private void onItemClick(PlayerInteractEvent event) {
@@ -131,7 +141,7 @@ public class BlazeSword implements Listener {
 				l.getBlock().setType(Material.FIRE);
 		}
 
-		loc.getWorld().playSound(loc, Sound.ITEM_FIRECHARGE_USE, 1.0F, rand.nextFloat() * 0.4F + 0.8F);
+		loc.getWorld().playSound(loc, Sound.ITEM_FIRECHARGE_USE, VOLUME, rand.nextFloat() * 0.4F + 0.8F);
 
 	}
 

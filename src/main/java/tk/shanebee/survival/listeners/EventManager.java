@@ -73,7 +73,7 @@ public class EventManager {
 		if (config.LEGENDARY_GIANTBLADE)
 			pm.registerEvents(new GiantBlade(plugin), this.plugin);
 		if (config.LEGENDARY_BLAZESWORD)
-			pm.registerEvents(new BlazeSword(), this.plugin);
+			pm.registerEvents(new BlazeSword(plugin), this.plugin);
 		if (LOCAL_CHAT > -1)
 			pm.registerEvents(new LocalChat(plugin), this.plugin);
 		if (config.MECHANICS_COMPASS_WAYPOINT)

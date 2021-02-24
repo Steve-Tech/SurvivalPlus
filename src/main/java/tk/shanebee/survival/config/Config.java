@@ -224,6 +224,9 @@ public class Config {
 	public boolean LEGENDARY_NOTCH_APPLE;
 	public boolean LEGENDARY_GOLDARMORBUFF;
 
+	// LEGENDARY TOOLS VOLUME
+	public float LEGENDARY_BLAZESWORD_VOLUME;
+
 	// HIDDEN CONFIG
     public int RECIPE_DELAY;
 
@@ -494,6 +497,9 @@ public class Config {
 		this.LEGENDARY_BLAZESWORD = settings.getBoolean("LegendaryItems.BlazeSword");
 		this.LEGENDARY_NOTCH_APPLE = settings.getBoolean("LegendaryItems.NotchApple");
 		this.LEGENDARY_GOLDARMORBUFF = settings.getBoolean("LegendaryItems.GoldArmorBuff");
+
+		// LEGENDARY ITEMS VOLUME
+		this.LEGENDARY_BLAZESWORD_VOLUME = (float) settings.getDouble("LegendaryItemsVolume.BlazeSword");
 
 		// HIDDEN CONFIG
         this.RECIPE_DELAY = settings.getInt("recipe-delay", 0);

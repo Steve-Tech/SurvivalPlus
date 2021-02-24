@@ -425,3 +425,7 @@ LegendaryItems:
   BlazeSword: true
   NotchApple: true
   GoldArmorBuff: true
+
+# Changes legendary items' volume
+LegendaryItemsVolume:
+  BlazeSword: 0.45

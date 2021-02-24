@@ -25,7 +25,7 @@ public class BlazeSwordSound extends BukkitRunnable {
 				Random rand = new Random();
 				assert player.getLocation().getWorld() != null;
 				player.getLocation().getWorld().playSound(
-						player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, 1.0F, rand.nextFloat() * 0.4F + 0.8F);
+						player.getLocation(), Sound.ENTITY_BLAZE_AMBIENT, plugin.getSurvivalConfig().LEGENDARY_BLAZESWORD_VOLUME, rand.nextFloat() * 0.4F + 0.8F);
 			}
 		}
 	}
