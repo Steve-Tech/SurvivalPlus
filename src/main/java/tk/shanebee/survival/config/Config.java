@@ -142,6 +142,9 @@ public class Config {
     public int MECHANICS_THIRST_REP_HONEY_BOTTLE;
     public int MECHANICS_THIRST_REP_OTHER_WATER;
 
+    public boolean MECHANICS_THIRST_ALWAYS_CLEAN_BOTTLES;
+	public boolean MECHANICS_THIRST_CLEAN_WATER_POISON;
+
 	public int MECHANICS_HUNGER_START_AMOUNT;
 	public int MECHANICS_HUNGER_RESPAWN_AMOUNT;
 
@@ -399,6 +402,9 @@ public class Config {
 		this.MECHANICS_THIRST_DRAIN_HEAT = settings.getInt("Mechanics.Thirst.HeatDrain");
         this.MECHANICS_THIRST_DRAIN_NETHER = settings.getInt("Mechanics.Thirst.NetherDrain");
 		this.MECHANICS_THIRST_DAMAGE_RATE = settings.getDouble("Mechanics.Thirst.DamageRate");
+
+		this.MECHANICS_THIRST_ALWAYS_CLEAN_BOTTLES = settings.getBoolean("Mechanics.Thirst.AlwaysCleanBottles");
+		this.MECHANICS_THIRST_CLEAN_WATER_POISON = settings.getBoolean("Mechanics.Thirst.CleanWaterPoison");
 
 		this.MECHANICS_THIRST_REP_BEET_SOUP = settings.getInt("Mechanics.Thirst.Replenish-Level.beetroot-soup");
 		this.MECHANICS_THIRST_REP_MELON_SLICE = settings.getInt("Mechanics.Thirst.Replenish-Level.melon-slice");

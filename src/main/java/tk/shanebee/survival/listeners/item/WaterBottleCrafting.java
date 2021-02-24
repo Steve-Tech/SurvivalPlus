@@ -66,18 +66,22 @@ public class WaterBottleCrafting implements Listener {
             Block targetBlock = player.getTargetBlockExact(5, FluidCollisionMode.ALWAYS);
             if (targetBlock == null) return;
             if (isWaterBlock(targetBlock)) {
+            	Item waterItem = Item.DIRTY_WATER;
+            	if (plugin.getSurvivalConfig().MECHANICS_THIRST_ALWAYS_CLEAN_BOTTLES) {
+					waterItem = Item.CLEAN_WATER;
+				}
 				e.setCancelled(true);
 				if (item.getAmount() > 1) {
-				    if (player.getInventory().addItem(ItemManager.get(Item.DIRTY_WATER)).size() > 0) {
-				        player.getWorld().dropItem(player.getLocation(), Item.DIRTY_WATER.getItem());
+				    if (player.getInventory().addItem(ItemManager.get(waterItem)).size() > 0) {
+				        player.getWorld().dropItem(player.getLocation(), waterItem.getItem());
                     }
 					if (player.getGameMode() == GameMode.SURVIVAL || player.getGameMode() == GameMode.ADVENTURE)
 						item.setAmount(item.getAmount() - 1);
 				} else {
 					if (player.getInventory().getItemInMainHand().getType() == item.getType())
-						player.getInventory().setItemInMainHand(ItemManager.get(Item.DIRTY_WATER));
+						player.getInventory().setItemInMainHand(ItemManager.get(waterItem));
 					else if (player.getInventory().getItemInOffHand().getType() == item.getType())
-						player.getInventory().setItemInOffHand(ItemManager.get(Item.DIRTY_WATER));
+						player.getInventory().setItemInOffHand(ItemManager.get(waterItem));
 				}
 			}
 		}

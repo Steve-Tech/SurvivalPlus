@@ -67,10 +67,12 @@ public class Consume implements Listener {
 							}
 						} else if (ItemManager.compare(item, Item.CLEAN_WATER)) {
 							change = config.MECHANICS_THIRST_REP_CLEAN_WATER;
-							Random rand = new Random();
-							if (rand.nextInt(10) + 1 <= 2) {
-								player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0));
-								player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 0));
+							if (config.MECHANICS_THIRST_CLEAN_WATER_POISON) {
+								Random rand = new Random();
+								if (rand.nextInt(10) + 1 <= 2) {
+									player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0));
+									player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 0));
+								}
 							}
 						} else if (ItemManager.compare(item, Item.PURIFIED_WATER)) {
 							change = config.MECHANICS_THIRST_REP_PURE_WATER;

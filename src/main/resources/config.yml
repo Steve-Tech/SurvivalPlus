@@ -191,6 +191,9 @@ Mechanics:
     Respawn-Amount: 30
     # Enables 3 different levels of water (dirty, clean, purified)
     PurifyWater: true
+    # Water bottles are always clean
+    AlwaysCleanBottles: true
+    CleanWaterPoison: false
     MeltSnow: true
     # The rate at which a player's thirst level will drop (value from 0.01 -> 1.0)
     DrainRate: 1.0
