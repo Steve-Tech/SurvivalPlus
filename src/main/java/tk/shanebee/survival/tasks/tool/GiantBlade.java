@@ -79,9 +79,9 @@ public class GiantBlade extends BukkitRunnable {
 				player.addPotionEffect(this.SLOW);
 				player.removePotionEffect(PotionEffectType.JUMP);
 				player.addPotionEffect(this.JUMP);
-				playerData.setStat(Stat.DUAL_WIELD, 1);
+                if (playerData != null) playerData.setStat(Stat.DUAL_WIELD, 1);
 			} else {
-				playerData.setStat(Stat.DUAL_WIELD, 0);
+                if (playerData != null) playerData.setStat(Stat.DUAL_WIELD, 0);
 			}
 		}
 	}
